@@ -50,7 +50,7 @@ def scrape_info():
     column_name=[mars_fact_df.iloc[0][x] for x in range(len(mars_fact_df.iloc[0]))]
     mars_fact_df.columns=column_name
     mars_fact_df=mars_fact_df.iloc[1:,:]
-    mars_fact_df.to_html('templates/mars_fact_table.html', index=False)
+    mars_fact_df.to_html('templates/mars_fact_table.html', index=False, classes="table table-striped")
     file = codecs.open("templates/mars_fact_table.html", "r", "utf-8")
     mars_fact_table=file.read()
 
